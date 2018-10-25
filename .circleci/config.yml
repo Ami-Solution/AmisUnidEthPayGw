@@ -62,6 +62,6 @@ jobs:
           name: lerna init
           command: lerna init
           
-       - run:
+      - run:
           name: Test Packages
           command: lerna run test
