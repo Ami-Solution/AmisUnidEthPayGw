@@ -19,7 +19,7 @@ jobs:
           - POSTGRES_DB: test
           - POSTGRES_PASSWORD: test
 
-      - image: davidqhr/0x-testrpc:latest
+      - image: ami-solution/0x-testrpc:latest
 
     steps:
       - checkout
@@ -60,4 +60,4 @@ jobs:
 
       - run:
           name: Test Packages
-command: lerna run test
+          command: lerna run test
