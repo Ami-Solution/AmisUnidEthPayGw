@@ -59,5 +59,9 @@ jobs:
           command: CI=false lerna run build --stream
 
       - run:
+          name: lerna init
+          command: lerna init
+          
+       - run:
           name: Test Packages
           command: lerna run test
