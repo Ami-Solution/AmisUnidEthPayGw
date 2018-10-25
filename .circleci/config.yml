@@ -45,6 +45,10 @@ jobs:
       - run:
           name: Install Lerna
           command: npm install --global lerna
+          
+      - run:
+          name: lerna init
+          command: lerna init
 
       - run:
           name: Clear Cached Dependencies
@@ -57,10 +61,6 @@ jobs:
       - run:
           name: Build Packages
           command: CI=false lerna run build --stream
-
-      - run:
-          name: lerna init
-          command: lerna init
           
       - run:
           name: Test Packages
