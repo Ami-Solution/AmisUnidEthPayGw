@@ -62,7 +62,7 @@ jobs:
           name: Test Packages
           command: lerna run test
           
-       - run:
+      - run:
           name: Test Packages
-          command: uninstall truffle
-          npm uninstall truffle
+          command: npm uninstall truffle
+          
