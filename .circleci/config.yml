@@ -41,7 +41,11 @@ jobs:
       - run:
           name: Change permissions from root to user
           command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
-
+          
+      - run:
+          name: npm install -g truffle
+          command: npm install -g truffle
+          
       - run:
           name: Install Lerna
           command: npm install --global lerna
@@ -57,3 +61,8 @@ jobs:
       - run:
           name: Test Packages
           command: lerna run test
+          
+       - run:
+          name: Test Packages
+          command: uninstall truffle
+          npm uninstall truffle
